@@ -1,12 +1,18 @@
+import datetime
+from animals import Animals
+
+
 class Menu:
-    @staticmethod
-    def add_new_animal():
-        pass
+    def __init__(self):
+        self.animals_methods = Animals()
 
-    @staticmethod
-    def list_command():
-        pass
+    def menu_new_animal(self):
+        self.animals_methods.get_list_command()
+        return
 
-    @staticmethod
-    def new_command():
+    def menu_list_command(self):
+        self.animals_methods.get_list_command()
+        return
+
+    def menu_new_command(self):
         pass

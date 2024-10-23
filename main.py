@@ -1,5 +1,8 @@
 from menuClass import Menu
+
+
 def menu():
+    cl_menu = Menu()
     flag = True
     while flag:
         command = int(input(
@@ -16,11 +19,11 @@ def menu():
         # 6.Общее к-во животных
 
         if command == 1:
-            Menu.add_new_animal()
+            cl_menu.menu_new_animal()
         elif command == 2:
-            Menu.list_command()
+            cl_menu.menu_list_command()
         elif command == 3:
-            Menu.new_command()
+            cl_menu.menu_new_command()
         # elif command == 4:
         #     pass
         # elif command == 5:
@@ -31,7 +34,6 @@ def menu():
             flag = False
         else:
             print('Такой команды не существует, попробуйте еще раз')
-
 
 
 if __name__ == '__main__':
