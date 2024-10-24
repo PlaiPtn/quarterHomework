@@ -1,13 +1,16 @@
 import datetime
-from animals import Animals
+from logics import Logics
 
 
 class Menu:
+    """
+    Класс, который реализует пункты меню
+    """
     def __init__(self):
-        self.animals_methods = Animals()
+        self.animals_methods = Logics()
 
     def menu_new_animal(self):
-        self.animals_methods.get_list_command()
+        self.animals_methods.add_animals()
         return
 
     def menu_list_command(self):
@@ -15,4 +18,7 @@ class Menu:
         return
 
     def menu_new_command(self):
-        pass
+        self.animals_methods.add_command()
+
+    def menu_get_list_animals(self):
+        self.animals_methods.get_list_animals()

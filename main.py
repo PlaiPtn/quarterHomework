@@ -2,35 +2,27 @@ from menuClass import Menu
 
 
 def menu():
+    """
+    Основное меню
+    :return:
+    """
     cl_menu = Menu()
     flag = True
     while flag:
-        command = int(input(
-            """
-            Выберите номер пункта меню:
-            1.Завести новое животное
-            2.Список команд которые умеет выполнять животное
-            3.Обучить животное новым командам
-            0.Выход из программы
-            """
-        ))
-        # 4.К-во животных определенного типа
-        # 5.К-во животных определенного вида
-        # 6.Общее к-во животных
+        command = input(
+            "Выберите номер пункта меню:\n1.Завести новое животное\n2.Список команд которые умеет выполнять животное\n"
+            "3.Обучить животное новым командам\n4.Вывести список всех животных\n0.Выход из программы\n:> "
+        )
 
-        if command == 1:
+        if command == '1':
             cl_menu.menu_new_animal()
-        elif command == 2:
+        elif command == '2':
             cl_menu.menu_list_command()
-        elif command == 3:
+        elif command == '3':
             cl_menu.menu_new_command()
-        # elif command == 4:
-        #     pass
-        # elif command == 5:
-        #     pass
-        # elif command == 6:
-            pass
-        elif command == 0:
+        elif command == '4':
+            cl_menu.menu_get_list_animals()
+        elif command == '0':
             flag = False
         else:
             print('Такой команды не существует, попробуйте еще раз')
